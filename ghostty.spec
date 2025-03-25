@@ -52,7 +52,8 @@ emulator that uses platform-native UI and GPU acceleration.
 %build
 # Run `./nix/build-support/fetch-zig-cache.sh` locally to
 # prep deps for offline install
-zig build %{common_build_flags}
+zig build 
+#{common_build_flags}
 
 %install
 export DESTDIR=%{buildroot}
