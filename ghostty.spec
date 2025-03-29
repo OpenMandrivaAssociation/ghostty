@@ -7,6 +7,8 @@ URL:            https://ghostty.org/
 Source0:        https://github.com/ghostty-org/ghostty/releases/download/tip/ghostty-source.tar.gz
 Source1:        zig-cache.tar.gz
 
+Patch0:        om-theme.patch
+
 BuildRequires: gettext
 BuildRequires: ncurses
 BuildRequires: pkgconfig
@@ -29,7 +31,7 @@ Ghostty is a fast, feature-rich, and cross-platform terminal
 emulator that uses platform-native UI and GPU acceleration.
 
 %prep
-%autosetup -a 1 -n ghostty-1.1.4-main+1067cd3
+%autosetup -p0 -a 1 -n ghostty-1.1.4-main+1067cd3
 
 %build
 # Run `./nix/build-support/fetch-zig-cache.sh` locally to
