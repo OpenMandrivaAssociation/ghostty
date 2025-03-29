@@ -8,6 +8,7 @@ Source0:        https://github.com/ghostty-org/ghostty/releases/download/tip/gho
 Source1:        zig-cache.tar.gz
 
 BuildRequires: gettext
+BuildRequires: ncurses
 BuildRequires: pkgconfig
 BuildRequires: pkgconfig(blueprint-compiler)
 BuildRequires: pkgconfig(fontconfig)
