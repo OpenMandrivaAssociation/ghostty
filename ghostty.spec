@@ -24,7 +24,7 @@ BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(libpng)
 BuildRequires: pkgconfig(oniguruma)
 BuildRequires: pkgconfig(pixman-1)
-BuildRequires: zig >= 0.17.0
+BuildRequires: zig
 
 %description
 Ghostty is a fast, feature-rich, and cross-platform terminal
