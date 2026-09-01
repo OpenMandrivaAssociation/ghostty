@@ -1,5 +1,5 @@
 Name:           ghostty
-Version:        1.1.4+git.1067cd3
+Version:        1.3.2+git.3c1ef5b
 Release:        1
 Summary:        Cross-platform terminal emulator
 License:        MIT
@@ -24,14 +24,14 @@ BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(libpng)
 BuildRequires: pkgconfig(oniguruma)
 BuildRequires: pkgconfig(pixman-1)
-BuildRequires: zig >= 0.14.0
+BuildRequires: zig >= 0.17.0
 
 %description
 Ghostty is a fast, feature-rich, and cross-platform terminal
 emulator that uses platform-native UI and GPU acceleration.
 
 %prep
-%autosetup -p0 -a 1 -n ghostty-1.1.4-main+1067cd3
+%autosetup -p0 -a 1 -n ghostty-1.3.2-main-+3c1ef5b
 
 %build
 # Run `./nix/build-support/fetch-zig-cache.sh` locally to
