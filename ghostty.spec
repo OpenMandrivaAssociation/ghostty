@@ -33,6 +33,12 @@ emulator that uses platform-native UI and GPU acceleration.
 %prep
 %autosetup -p0 -a 1 -n ghostty-1.3.2-main-+3c1ef5b
 
+for archive in zig-cache/p/*.tar.gz; do
+    dir="${archive%.tar.gz}"
+    mkdir -p "$dir"
+    tar -xzf "$archive" -C "$dir" --strip-components=2
+done
+
 %build
 # Run `./nix/build-support/fetch-zig-cache.sh` locally to
 # prep deps for offline install 
