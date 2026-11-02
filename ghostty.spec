@@ -1,6 +1,6 @@
 Name:		ghostty
 Version:	1.4.0
-Release:	1
+Release:	2
 Summary:	Cross-platform terminal emulator
 # The application is MIT. The terminal core also includes wuffs
 # (MIT and Apache-2.0), pixels (CC0-1.0), and uucode (MIT).
