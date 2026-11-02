@@ -1,6 +1,6 @@
---- src/config/config-template.orig	2025-03-29 15:21:59.027840820 +0100
-+++ src/config/config-template	2025-03-29 15:26:10.966147500 +0100
-@@ -47,3 +47,36 @@
+--- a/src/config/config-template	2026-11-02 01:29:07.936042369 +0100
++++ b/src/config/config-template	2026-11-02 01:27:28.509956562 +0100
+@@ -50,3 +50,36 @@
  # # which is explained in the docs for that config option.
  # # Just for example:
  # resize-overlay-duration = 4s 200ms

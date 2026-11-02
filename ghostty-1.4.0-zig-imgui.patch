@@ -1,0 +1,16 @@
+--- a/pkg/dcimgui/build.zig
++++ b/pkg/dcimgui/build.zig
+@@ -56,9 +56,12 @@
+     var define_flags: std.ArrayList([]const u8) = .empty;
+     defer define_flags.deinit(b.allocator);
+     try define_flags.appendSlice(b.allocator, &.{
+-        "-DIMGUI_HAS_DOCK=1",
++        // ImGui 1.92 docking already defines IMGUI_HAS_DOCK. Passing it
++        // again makes zig 0.17 reject the redefinition.
+         "-DIMGUI_USE_WCHAR32=1",
+         "-DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1",
++        // OpenMandriva zig 0.17 ships a broken amxtf32intrin.h.
++        "-D__AMX_TF32INTRIN_H",
+     });
+     if (freetype) try define_flags.appendSlice(b.allocator, &.{
+         "-DIMGUI_ENABLE_FREETYPE=1",
